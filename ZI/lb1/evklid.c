@@ -1,6 +1,6 @@
 int Evklid_GCD(long long a, long long b, long long *U)
 {
-        long long V[3] = {b, 0, 1};
+        long long V[3];
         long long T[3];
         long long q;
         
@@ -10,6 +10,10 @@ int Evklid_GCD(long long a, long long b, long long *U)
         U[0] = a;
         U[1] = 1;
         U[2] = 0;
+        
+        V[0] = b;
+        V[1] = 0;
+        V[2] = 1;
         
         while(V[0] != 0){
                 q = U[0] / V[0];
