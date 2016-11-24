@@ -19,6 +19,21 @@ long long Random32_Prime()
         return 99991;
 }
 
+/*
+        Функция считает количество бит в числе
+*/
+long long CountingBit(long long number)
+{
+        long long i = 0;
+        
+        while(number > 0){
+                i++;
+                number = number >> 1;
+        }
+        
+        return i;
+}
+
 long long Generate_P(long long q)
 {
         return 2 * q + 1;
@@ -40,12 +55,12 @@ long long Generate_X()
         return Random32();
 }
 
-long long Create_Y(long long g, long long p, long long X)
+long long Generate_Y(long long g, long long p, long long X)
 {
         return PowMod(g, X, p);
 }
 
-long long Create_Z(long long Yb, long long X, long long p)
+long long Generate_Z(long long Yb, long long X, long long p)
 {
         return PowMod(Yb, X, p);
 }

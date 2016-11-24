@@ -13,11 +13,12 @@
 long long Random32();
 long long Random32_1(long long x);
 long long Random32_Prime();
+long long CountingBit(long long number);
 long long Generate_P(long long q);
 long long Generate_G(long long p, long long q);
 long long Generate_X();
-long long Create_Y(long long g, long long p, long long X);
-long long Create_Z(long long Yb, long long X, long long p);
+long long Generate_Y(long long g, long long p, long long X);
+long long Generate_Z(long long Yb, long long X, long long p);
 
 /*
         dh.c
